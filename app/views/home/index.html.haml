@@ -1,2 +1,5 @@
 HOME
 =link_to "Connect with Twitter", user_omniauth_authorize_path(:twitter)
+- if(current_user && twit_identity = current_user.identities.where(provider: 'twitter'))
+  %img{src: twit_identity[0].image}
+  / %img{src: current_user.identities.where(provider: 'twitter')[0].image}
