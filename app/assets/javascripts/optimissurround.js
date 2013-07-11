@@ -20,10 +20,14 @@ function increase_delay(e){
   play_sync()
 }
 
+var timer=0;
 function start_interval(e){
-  var timer = setInterval(function(){play_sync()}, 1000)
+  clearInterval(timer)
+  timer = setInterval(function(){play_sync()}, 1000)
 }
-
+function stop_interval(e){
+  clearInterval(timer)
+}
 
 $(function(){
 
@@ -57,7 +61,9 @@ $(function(){
 
 $('#decrease-delay').on('click', decrease_delay)
 $('#increase-delay').on('click', increase_delay)  
-$('#start-timer').on('click', start_interval)  
+$('#start-timer').on('click', start_interval)
+$('#stop-timer').on('click', stop_interval)
+ 
 
 setInterval
 

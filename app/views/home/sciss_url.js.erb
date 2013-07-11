@@ -1,0 +1,7 @@
+var milliseconds = <%= @ms %>
+
+var clippy = $("<embed src=\"<%= @url %>\" autostart=\"true\" width=\"0\" height=\"0\" class=\"clips\" ></embed>")
+
+$('.audio-clips').append(clippy)
+
+setTimeout(function(){$("<%= @id_name %>").remove()}, milliseconds)
