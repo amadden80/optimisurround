@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130709151616) do
+ActiveRecord::Schema.define(:version => 20130710002753) do
+
+  create_table "filters", :force => true do |t|
+    t.boolean  "ear"
+    t.decimal  "azimuth"
+    t.decimal  "elevation"
+    t.string   "coefficients"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "filters_users", :id => false, :force => true do |t|
+    t.integer "filter_id"
+    t.integer "user_id"
+  end
 
   create_table "identities", :force => true do |t|
     t.string   "provider"
@@ -26,6 +40,12 @@ ActiveRecord::Schema.define(:version => 20130709151616) do
     t.string   "token"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "itds", :force => true do |t|
+    t.decimal  "milliseconds"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "users", :force => true do |t|

@@ -5,6 +5,9 @@ gem 'rails', '3.2.12'
 gem 'jquery-rails'
 # gem 'jquery-ui-rails'
 
+# Needed for heroku rails 4.0
+# gem 'rails_12factor', group: :production
+
 gem 'bcrypt-ruby'
 gem 'haml'
 gem 'pg'

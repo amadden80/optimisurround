@@ -1,5 +1,107 @@
-HOME
-=link_to "Connect with Twitter", user_omniauth_authorize_path(:twitter)
-- if(current_user && twit_identity = current_user.identities.where(provider: 'twitter'))
-  %img{src: twit_identity[0].image}
-  / %img{src: current_user.identities.where(provider: 'twitter')[0].image}
+/ HOME
+/ =link_to "Connect with Twitter", user_omniauth_authorize_path(:twitter)
+/ - if(current_user && twit_identity = current_user.identities.where(provider: 'twitter'))
+/   %img{src: twit_identity[0].image}
+
+Optimissurround
+
+
+/ #jplayer_left.players
+/   #jp_container_1.jp-audio
+/ #jplayer_right.players
+/   #jp_container_1.jp-audio
+
+
+%button#increase-delay
+  Increase Delay
+
+%button#decrease-delay
+  Decrease Delay
+
+
+%button#start-timer
+  Start
+
+%button#end-timer
+  End
+
+
+%body
+  
+  #jquery_jplayer_left.jp-jplayer
+  #jp_container_left.jp-audio
+    .jp-type-single
+      .jp-gui.jp-interface
+        %ul.jp-controls
+          %li
+            %a.jp-play{:href => "javascript:;", :tabindex => "1"} play
+          %li
+            %a.jp-pause{:href => "javascript:;", :tabindex => "1"} pause
+          %li
+            %a.jp-stop{:href => "javascript:;", :tabindex => "1"} stop
+          %li
+            %a.jp-mute{:href => "javascript:;", :tabindex => "1", :title => "mute"} mute
+          %li
+            %a.jp-unmute{:href => "javascript:;", :tabindex => "1", :title => "unmute"} unmute
+          %li
+            %a.jp-volume-max{:href => "javascript:;", :tabindex => "1", :title => "max volume"} max volume
+        .jp-progress
+          .jp-seek-bar
+            .jp-play-bar
+        .jp-volume-bar
+          .jp-volume-bar-value
+        .jp-time-holder
+          .jp-current-time
+          .jp-duration
+          %ul.jp-toggles
+            %li
+              %a.jp-repeat{:href => "javascript:;", :tabindex => "1", :title => "repeat"} repeat
+            %li
+              %a.jp-repeat-off{:href => "javascript:;", :tabindex => "1", :title => "repeat off"} repeat off
+      .jp-title
+        %ul
+          %li Left
+      .jp-no-solution
+        %span Update Required
+        To play the media you will need to either update your browser to a recent version or update your
+        = succeed "." do
+          %a{:href => "http://get.adobe.com/flashplayer/", :target => "_blank"} Flash plugin
+
+  #jquery_jplayer_right.jp-jplayer
+  #jp_container_right.jp-audio
+    .jp-type-single
+      .jp-gui.jp-interface
+        %ul.jp-controls
+          %li
+            %a.jp-play{:href => "javascript:;", :tabindex => "1"} play
+          %li
+            %a.jp-pause{:href => "javascript:;", :tabindex => "1"} pause
+          %li
+            %a.jp-stop{:href => "javascript:;", :tabindex => "1"} stop
+          %li
+            %a.jp-mute{:href => "javascript:;", :tabindex => "1", :title => "mute"} mute
+          %li
+            %a.jp-unmute{:href => "javascript:;", :tabindex => "1", :title => "unmute"} unmute
+          %li
+            %a.jp-volume-max{:href => "javascript:;", :tabindex => "1", :title => "max volume"} max volume
+        .jp-progress
+          .jp-seek-bar
+            .jp-play-bar
+        .jp-volume-bar
+          .jp-volume-bar-value
+        .jp-time-holder
+          .jp-current-time
+          .jp-duration
+          %ul.jp-toggles
+            %li
+              %a.jp-repeat{:href => "javascript:;", :tabindex => "1", :title => "repeat"} repeat
+            %li
+              %a.jp-repeat-off{:href => "javascript:;", :tabindex => "1", :title => "repeat off"} repeat off
+      .jp-title
+        %ul
+          %li Right
+      .jp-no-solution
+        %span Update Required
+        To play the media you will need to either update your browser to a recent version or update your
+        = succeed "." do
+          %a{:href => "http://get.adobe.com/flashplayer/", :target => "_blank"} Flash plugin

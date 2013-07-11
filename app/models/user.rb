@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
 
   has_many :identities
 
+  has_and_belongs_to_many :filters
+
   def self.find_for_twitter_oauth(auth, user)
     identity = user.identities.where(provider: auth.provider).first
     if identity
