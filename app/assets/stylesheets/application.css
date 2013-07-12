@@ -15,8 +15,8 @@
 
 
 #cutting-pad {
-  margin: auto;
-  width:50%;
-  height:250px;
-  border: 1px dashed black;
+  margin-left: auto;
+  margin-right: auto; 
+  width:75%;
+  max-height:55%;
 }
