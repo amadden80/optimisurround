@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130710002753) do
+ActiveRecord::Schema.define(:version => 20130712134327) do
 
   create_table "filters", :force => true do |t|
     t.boolean  "ear"
@@ -61,6 +61,10 @@ ActiveRecord::Schema.define(:version => 20130710002753) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "confirmation_token"
+    t.string   "unconfirmed_email"
+    t.string   "confirmed_at"
+    t.string   "confirmation_sent_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

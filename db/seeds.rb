@@ -8,15 +8,15 @@
 
 User.delete_all()
 
-u1 = User.new(:email => "amadden80@gmail.com", :password => "password", :password_confirmation => "password", :remember_me => false)
+# u1 = User.new(:email => "amadden80@gmail.com", :password => "password", :password_confirmation => "password", :remember_me => false)
 
-f1 = Filter.new(:azimuth => -30, :elevation => 0, :ear => 0)
-f2 = Filter.new(:azimuth => 30, :elevation => 0, :ear => 1)
+# f1 = Filter.new(:azimuth => -30, :elevation => 0, :ear => 0)
+# f2 = Filter.new(:azimuth => 30, :elevation => 0, :ear => 1)
 
-u1.filters << f1
-u1.filters << f2
+# u1.filters << f1
+# u1.filters << f2
 
-u1.save!
-f1.save!
-f2.save!
+# u1.save!
+# f1.save!
+# f2.save!
 

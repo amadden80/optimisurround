@@ -2,7 +2,14 @@ Optimissurround::Application.routes.draw do
 
   devise_for :users, :controllers => {:omniauth_callbacks => "users/omniauth_callbacks"}
 
-  root :to => "home#index"
+  # root :to => "home#index"
+  root :to => "home#virtual_haircut"
+
+  match '/sciss' => 'home#sciss'
+
+  match '/virtual_haircut', to: 'home#virtual_haircut'
+
+  post '/suggestions', to: 'home#suggestions_email'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

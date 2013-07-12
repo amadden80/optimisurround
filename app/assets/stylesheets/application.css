@@ -11,3 +11,12 @@
  *= require_self
  *= require_tree .
  */
+
+
+
+#cutting-pad {
+  margin: auto;
+  width:50%;
+  height:250px;
+  border: 1px dashed black;
+}

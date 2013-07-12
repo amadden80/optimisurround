@@ -35,10 +35,20 @@ Optimissurround::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
-# Edited for divise
-    config.action_mailer.default_url_options = { :host => 'localhost:3000' }
-
-
+# Edited for divise & mailgun
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.smtp_settings = {
+    :authentication => 'plain',
+    :address => 'smtp.mailgun.org',
+    :port => 587,
+    :user_name => 'postmaster@app15937760.mailgun.org',
+    :password => '4t4ulih73el4',
+    :authentication => 'plain',
+    :enable_starttls_auto => true
+  }
 
 # Edtied for twitter
   ENV['TWITTER_APP_ID'] = 'kAM929AJirWfChzAmVAVrQ'

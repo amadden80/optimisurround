@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %title Optimissurround
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    %p.notice= notice
+    %p.alert= alert
+    - if user_signed_in?
+      %div
+        Signed in as... #{current_user.email}
+      %div= link_to "Log-Out", destroy_user_session_path, method: :delete
+      = form_tag(suggestions_path, remote:true, id: 'suggestions') do
+        = text_area_tag 'message', nil, placeholder: 'Suggestions?'
+        = submit_tag 'Send'
+    = yield

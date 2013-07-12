@@ -1,7 +1,8 @@
-var milliseconds = <%= @ms %>
-
-var clippy = $("<embed src=\"<%= @url %>\" autostart=\"true\" width=\"0\" height=\"0\" class=\"clips\" ></embed>")
-
+var clipCnt = $('.audio-clips').children().length
+if (clipCnt > 3){
+  $('.audio-clips').children(0)[0].remove()
+}
+var url = '<%= "#{@url}".html_safe %>'
+var id_name = '<%= "#{@id_name}".html_safe %>'
+var clippy = $('<audio preload="auto" controls autoplay="true" id="' + id_name + '" ><source src="' + url + '" type="audio/wav"></source></audio>')
 $('.audio-clips').append(clippy)
-
-setTimeout(function(){$("<%= @id_name %>").remove()}, milliseconds)
