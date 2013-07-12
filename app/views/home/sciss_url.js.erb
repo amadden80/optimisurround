@@ -4,5 +4,5 @@ if (clipCnt > 3){
 }
 var url = '<%= "#{@url}".html_safe %>'
 var id_name = '<%= "#{@id_name}".html_safe %>'
-var clippy = $('<audio preload="auto" controls autoplay="true" id="' + id_name + '" ><source src="' + url + '" type="audio/wav"></source></audio>')
+var clippy = $('<audio autoplay="true" id="' + id_name + '" ><source src="' + url + '" type="audio/wav"></source></audio>')
 $('.audio-clips').append(clippy)
