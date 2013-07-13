@@ -19,5 +19,24 @@
 #pad-box{
   width:85%;
   max-height:30em;
-  max-width:40em;
+  max-width:50em;
+}
+
+ellipse {
+  fill: red;
+  opacity: 0.5;
+}
+
+#svg-overlap{
+  position: absolute;
+  top:0px;
+}
+
+#data-visualizations-stage {
+  position: relative;
+}
+.data-visualization-actress {
+  position: absolute;
+  top: 0;
+  left: 0;
 }

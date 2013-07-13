@@ -10,6 +10,9 @@ Optimissurround::Application.routes.draw do
 
   post '/suggestions', to: 'home#suggestions_email'
 
+  match '/data' => 'data#console'
+  post '/get_visualization', to: 'data#visualization'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

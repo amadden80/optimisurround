@@ -1,0 +1,14 @@
+$('#data-visualizations-stage').children(0).remove()
+$('#data-visualizations-stage').css('height', '300px')
+var clip_data = <%=raw @clips_byhour %>
+
+new Morris.Line({
+  element: 'data-visualizations-stage',
+  data: clip_data,
+  xkey: 'hour',
+  ykeys: ['numClips'],
+  labels: ['Numeber Clips'],
+  hideHover: true,
+});
+
+$('#data-visualizations-stage').prepend($('<h3>').text('Clips Over Time'))

@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130712134327) do
+ActiveRecord::Schema.define(:version => 20130712214400) do
+
+  create_table "clips", :force => true do |t|
+    t.float    "x_percentage"
+    t.float    "y_percentage"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "filters", :force => true do |t|
     t.boolean  "ear"

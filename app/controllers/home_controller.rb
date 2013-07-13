@@ -12,6 +12,8 @@ class HomeController < ApplicationController
 
     if params[:x_percnt] && params[:y_percnt]
 
+      Clip.create(x_percentage: params[:x_percnt], y_percentage: params[:y_percnt])
+
       ele = (((((params[:y_percnt].to_f*12).round)*10) - 130).abs) -40
       azi = 2*(params[:x_percnt].to_f*90).round+90
       puts ele

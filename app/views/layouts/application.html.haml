@@ -4,6 +4,13 @@
     %title Optimissurround
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
+    - if user_signed_in?
+      = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"
+      = javascript_include_tag "http://cdn.oesmith.co.uk/morris-0.4.3.min.js"
+      = javascript_include_tag "http://mbostock.github.com/d3/d3.js?1.29.1"
+    - else
+      %p
+        =link_to "Sign-In for Usuage Visualizations", new_user_session_path 
     = csrf_meta_tags
   %body
     %p.notice= notice
@@ -12,6 +19,8 @@
       %div
         Signed in as... #{current_user.email}
       %div= link_to "Log-Out", destroy_user_session_path, method: :delete
+      %div= link_to "Home", root_path
+      %div= link_to "Data-View", data_path      
       = form_tag(suggestions_path, remote:true, id: 'suggestions') do
         = text_area_tag 'message', nil, placeholder: 'Suggestions?'
         = submit_tag 'Send'

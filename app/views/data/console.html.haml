@@ -1,0 +1,11 @@
+:javascript
+  var clip_data = #{@clips}
+
+%h1
+  Visualizations:
+
+=form_tag(get_visualization_path, remote:true) do
+  =submit_tag "Basic-Plot"
+  =submit_tag "Spatial"
+
+#data-visualizations-stage
