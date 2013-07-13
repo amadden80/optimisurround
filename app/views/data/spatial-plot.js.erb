@@ -1,6 +1,7 @@
 $('#data-visualizations-stage').children(0).remove()
-$('#data-visualizations-stage').append($('<img src="/mrs3d-hair.png" id="cutting-pad"/>'))
-$('#data-visualizations-stage').append($('<div postion:"absolute" id="svg-overlap" width:"100%" height:"100%"></div>'))
+$('#data-visualizations-stage').append($('<div id="pad-box"></div>'))
+$('#pad-box').append($('<img src="/mrs3d-hair.png" id="cutting-pad"/>'))
+$('#pad-box').append($('<div postion:"absolute" id="svg-overlap" width:"100%" height:"100%"></div>'))
 
 var clip_data = <%=raw @clips %>
 
@@ -34,10 +35,6 @@ var head = g.append("svg:ellipse")
 head.attr("transform", function(d) {
   return "translate(" + d.path[0] + ")";
 });
-
-
-$('#data-visualizations-stage').prepend($('<h3>').text('Click Heat')) 
-
 
 
 

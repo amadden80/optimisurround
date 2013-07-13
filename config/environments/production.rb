@@ -66,8 +66,6 @@ Optimissurround::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
 
-
-
   config.action_mailer.default_url_options = { :host => 'Optimissurround.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
