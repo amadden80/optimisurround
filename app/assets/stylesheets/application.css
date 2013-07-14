@@ -17,9 +17,9 @@
   width:100%;
 }
 #pad-box{
-  width:85%;
+/*  width:85%;
   max-height:30em;
-  max-width:50em;
+  max-width:50em;*/
 }
 
 ellipse {
@@ -39,4 +39,9 @@ ellipse {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+
+.grey-text{
+  color: gray;
 }

@@ -3,7 +3,9 @@ $('#data-visualizations-stage').append($('<div id="pad-box"></div>'))
 $('#pad-box').append($('<img src="/mrs3d-hair.png" id="cutting-pad"/>'))
 $('#pad-box').append($('<div postion:"absolute" id="svg-overlap" width:"100%" height:"100%"></div>'))
 
+
 var clip_data = <%=raw @clips %>
+
 
 var w = $('#cutting-pad').width(),
     h = $('#cutting-pad').height(),

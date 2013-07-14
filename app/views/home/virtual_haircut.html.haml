@@ -1,13 +1,17 @@
-%h1
-  Nice Hair (NOT!)
-%h3
-  You must be wearing headphones for the binaural effect.
+.row.clearfix
+  .eight.columns.clearfix
+    %h1
+      Nice Hair (NOT!)
+.row.clearfix
+  .sixteen.columns.clearfix
+    %h3
+      You must be wearing headphones for the binaural effect.
   
+.row.clearfix
+  .sixteen.columns.clearfix
+    #pad-box
+      %img{src: '/mrs3d-hair.png', id: "cutting-pad"}
 
-/ =form_tag(sciss_path, remote:true) do
-/   %button Hear Sciss
+.row.clearfix
+  .audio-clips
   
-#pad-box
-  %img{src: '/mrs3d-hair.png', id: "cutting-pad"}
-
-.audio-clips

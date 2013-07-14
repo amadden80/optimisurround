@@ -1,11 +1,14 @@
 :javascript
   var clip_data = #{@clips}
 
-%h1
-  Visualizations:
+.row.clearfix
+  .sixteen.columns.clearfix
+    %h1
+      Visualizations:
 
-=form_tag(get_visualization_path, remote:true) do
-  =submit_tag "Basic-Plot"
-  =submit_tag "Spatial"
-
-#data-visualizations-stage
+    =form_tag(get_visualization_path, remote:true) do
+      =submit_tag "Time"
+      =submit_tag "Spatial"
+.row.clearfix
+  .sixteen.columns.clearfix
+    #data-visualizations-stage
